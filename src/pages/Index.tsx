@@ -1,4 +1,3 @@
-
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { saveFormData, validateForm } from '../utils/formUtils';
@@ -102,7 +101,7 @@ const Index = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-blue-50 py-12 px-4 sm:px-6 lg:px-8">
         <Card className="max-w-md mx-auto">
           <CardHeader>
             <CardTitle className="text-center text-2xl text-primary">Thank You!</CardTitle>
@@ -141,13 +140,13 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-blue-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="page-title">College Admission Form</h1>
         
         <Card className="form-section mb-8">
           <CardHeader>
-            <CardTitle className="text-xl text-gray-800">Personal Details</CardTitle>
+            <CardTitle className="text-xl text-primary">Personal Details</CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -165,27 +164,23 @@ const Index = () => {
                 </div>
                 
                 <div className="form-group">
-                  <Label htmlFor="middleName">Middle Name <span className="text-red-500">*</span></Label>
+                  <Label htmlFor="middleName">Middle Name</Label>
                   <Input
                     id="middleName"
                     name="middleName"
                     value={formData.middleName}
                     onChange={handleChange}
-                    className={errors.middleName ? "border-red-500" : ""}
                   />
-                  {errors.middleName && <p className="text-red-500 text-sm mt-1">{errors.middleName}</p>}
                 </div>
                 
                 <div className="form-group">
-                  <Label htmlFor="lastName">Last Name <span className="text-red-500">*</span></Label>
+                  <Label htmlFor="lastName">Last Name</Label>
                   <Input
                     id="lastName"
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className={errors.lastName ? "border-red-500" : ""}
                   />
-                  {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>}
                 </div>
               </div>
               

@@ -51,7 +51,7 @@ export const validateForm = (formData: Record<string, any>): Record<string, stri
 
   // Required fields validation
   const requiredFields = [
-    'fullName', 'middleName', 'lastName', 'gender', 'dob', 
+    'fullName', 'gender', 'dob', 
     'pob', 'address', 'phone', 'email', 'fatherName', 'motherName', 'chooseBCA'
   ];
   
@@ -73,3 +73,4 @@ export const validateForm = (formData: Record<string, any>): Record<string, stri
 
   return errors;
 };
+
